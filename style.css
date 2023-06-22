@@ -33,7 +33,7 @@ body{
     border-radius : 5px;
 }
 
-button{
+.btn{
     background : #93DEFF;
     color : #323643;
     padding : 10px 20px;
@@ -44,14 +44,41 @@ button{
     transition : .25s;
 }
 
-button:hover{
+.btn:hover{
     background : #78b7d2;
 }
 
-button:active{
+.btn:active{
     background : #95d9f7;
 }
 
-.qrcode[src=""]{
+.qrcode{
     display : none;
+    justify-content : center;
+    align-items : center;
+    width : 150px;
+    height : 150px;
+}
+
+.qrcode .output{
+    display : none;
+}
+
+.qrcode .loading{
+    position : relative;
+    width : 70px;
+    height : 70px;
+    border : 10px solid #78b7d2;
+    border-top : 10px solid #323643;
+    border-radius : 50%;
+    animation : rotating 1s linear infinite;
+}
+
+@keyframes rotating{
+    0%{
+        transform : rotate(0deg);
+    }
+    100%{
+        transform : rotate(360deg);
+    }
 }
