@@ -11,7 +11,7 @@ $(() => {
             $(".container .qrcode").append(loading, `<img class='output' src='${api + $(".container .content").val()}'>`);
             $(".container .qrcode .output").on("load", () => {
                 $(".container .qrcode .output").show();
-                $(".container .qrcode .loading").hide();
+                $(".container .qrcode .loading").remove();
             });
         }else{
             $(".container .qrcode").css("display", "none");
